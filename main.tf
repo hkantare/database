@@ -14,6 +14,9 @@ resource "ibm_database" "database" {
 
 }
 
+data "ibm_container_cluster_config" "testacc_ds_cluster" {
+  cluster_name_id = "c1nusb0f0ljdb32lo4mg"
+
 variable "database_tags" {
 type = "list"
 default = ["a:b", "c:d"]
